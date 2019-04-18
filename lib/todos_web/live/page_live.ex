@@ -17,13 +17,19 @@ defmodule TodosWeb.PageLive do
     end) }
   end
   def handle_event("create-todo", todo, socket) do
-    # Save to db
+    # TODO: Save to db
     socket_ = socket
               |> update(:todos, &[todo | &1])
               |> update(:title, &to_nil/1)
               |> update(:description, &to_nil/1)
 
     {:noreply, socket_}
+  end
+  def handle_event("delete-todo", title, socket) do
+    {:noreply, socket |> update(:todos, fn todos ->
+      # TODO: Improve search (convert to maps; use timestamp keys for ordering)
+      Enum.filter(todos, fn todo -> todo["title"] != title end)
+    end)}
   end
 
   def to_nil(_), do: nil

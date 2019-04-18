@@ -3,3 +3,11 @@
   <textarea placeholder="Description" name="description" value="<%= @description %>" style="resize: none;"></textarea>
   <input type="submit" value="Submit">
 </form>
+
+<%= for %{"title" => title, "description" => description} <- @todos do %>
+  <div>
+    <h1><%= title %></h1>
+    <p><%= description %></p>
+    <button phx-click="delete-todo" name="by-title" value="<%= title %>">Delete</button>
+  </div>
+<%  end %>

@@ -1,4 +1,4 @@
-import css from "../css/app.css"
+import "../css/app.css"
 import "phoenix_html"
 import LiveSocket from "phoenix_live_view"
 
