@@ -14,7 +14,8 @@ config :todos, TodosWeb.Endpoint,
   url:             [host: "localhost"],
   secret_key_base: "TJdlYIi2+K9n4/dpF5mRGwt4hhDya2OxpT7CP+6f7Vj/NN7zidkLi6jDOXDdiMpl",
   render_errors:   [view: TodosWeb.ErrorView, accepts: ~w(html json)],
-  pubsub:          [name: Todos.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub:          [name: Todos.PubSub, adapter: Phoenix.PubSub.PG2],
+  live_view:       [signing_salt: "v6uuVg9ZP+ompWAM/DQ4l9fgNC02/EHt"]
 
 config :ecto_mnesia,
   host:         {:system, :atom, "MNESIA_HOST", Kernel.node},

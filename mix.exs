@@ -21,19 +21,20 @@ defmodule Todos.MixProject do
   defp elixirc_paths(_),     do: ["lib"]
 
   defp deps, do: [
-    {:phoenix, "~> 1.4.3"},
-    {:phoenix_pubsub, "~> 1.1"},
-    {:plug_cowboy, "~> 2.0"},
-    {:phoenix_html, "~> 2.11"},
+    {:phoenix,             "~> 1.4.3"},
+    {:phoenix_pubsub,      "~> 1.1"},
+    {:phoenix_html,        "~> 2.11"},
     {:phoenix_live_reload, "~> 1.2", only: :dev},
-    {:gettext, "~> 0.11"},
-    {:jason, "~> 1.0"},
+    {:phoenix_live_view,   github: "phoenixframework/phoenix_live_view"},
+    {:plug_cowboy,         "~> 2.0"},
+    {:gettext,             "~> 0.11"},
+    {:jason,               "~> 1.0"},
 
     ## Database deps
-    {:ecto, "~> 2.1.6"},
-    # {:ecto_sql, "~> 3.0"},
-    {:ecto_mnesia, "~> 0.9.1"},
-    # {:postgrex, ">= 0.0.0"},
+    {:ecto,         "~> 2.1.6"},
+    # {:ecto_sql,     "~> 3.0"},
+    {:ecto_mnesia,  "~> 0.9.1"},
+    # {:postgrex,     ">= 0.0.0"},
     {:phoenix_ecto, "~> 3.0"},
     # {:phoenix_ecto, "~> 4.0"},
   ]
