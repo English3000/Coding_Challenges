@@ -1,0 +1,5 @@
+<form phx-change="typing" phx-submit="create-todo">
+  <input    placeholder="Title"       name="title"       value="<%= @title %>">
+  <textarea placeholder="Description" name="description" value="<%= @description %>" style="resize: none;"></textarea>
+  <input type="submit" value="Submit">
+</form>
