@@ -3,7 +3,7 @@ defmodule Todos.Application do
   use Application
 
   def start(_type, _args) do
-    [Todos.Repo, TodosWeb.Endpoint]
+    [%{id: Todos.Repo, start: {Todos.Repo, :start_link, []}}, TodosWeb.Endpoint]
     |> Supervisor.start_link(strategy: :one_for_one, name: Todos.Supervisor)
   end
 

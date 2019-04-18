@@ -1,5 +1,5 @@
 defmodule Todos.Repo do
   use Ecto.Repo,
     otp_app: :todos,
-    adapter: Ecto.Adapters.Postgres
+    adapter: EctoMnesia.Adapter #Ecto.Adapters.Postgres
 end
